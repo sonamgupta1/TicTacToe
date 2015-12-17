@@ -6,7 +6,10 @@ IonicSideMenuApp.controller('homeCtrl', function($scope,$state, $ionicModal, $ti
         $state.go('app.signUp');
     }
 
-    $scope.login = function(){
+    $scope.login = function(username,password){
+
+        console.log("username",username);
+        console.log("password",password);
         $state.go('app.dashboard');
     }
 })

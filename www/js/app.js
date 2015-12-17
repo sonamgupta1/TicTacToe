@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-var IonicSideMenuApp = angular.module('starter', ['ionic'])
+var IonicSideMenuApp = angular.module('starter', ['ionic','ngCordova'])
 
 IonicSideMenuApp.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -63,7 +63,8 @@ IonicSideMenuApp.config(function($stateProvider, $urlRouterProvider) {
           url: '/signUp',
           views: {
               'menuContent': {
-                  templateUrl: 'templates/signUp.html'
+                  templateUrl: 'templates/signUp.html',
+                  controller: 'signUpCtrl'
               }
           }
       })
@@ -71,7 +72,8 @@ IonicSideMenuApp.config(function($stateProvider, $urlRouterProvider) {
           url: '/dashboard',
           views: {
               'menuContent': {
-                  templateUrl: 'templates/dashboard.html'
+                  templateUrl: 'templates/dashboard.html',
+                  controller:'homeCtrl'
 
               }
           }

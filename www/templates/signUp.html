@@ -3,5 +3,13 @@
         <h1>
             sign up
         </h1>
+        <button class="button button-full button-positive" ng-click="limitPicture()">Take Picture</button>
+
+        <div class="row" ng-repeat="image in images">
+
+            <img ng-src="{{image}}">
+
+        </div>
+
     </ion-content>
 </ion-view>

@@ -3,17 +3,20 @@
         <div class="list">
             <label class="item item-input">
                 <span class="input-label">Username</span>
-                <input type="text">
+                <input type="text"  ng-model="username">
             </label>
             <label class="item item-input">
                 <span class="input-label">Password</span>
-                <input type="password">
+                <input type="password"  ng-model="password">
             </label>
         </div>
-    </ion-content>
-    <div class="bar bar-footer">
-        <button class="button button-positive" ng-click="login()">Login</button>
+        <button class="button button-positive" ng-click="login(username,password)">Login</button>
 
         <button class="button button-positive" ng-click="signUpPage()">SignUp</button>
-    </div>
+    </ion-content>
+    <!--<div class="bar bar-footer">-->
+        <!--<button class="button button-positive" ng-click="login(username,password)">Login</button>-->
+
+        <!--<button class="button button-positive" ng-click="signUpPage()">SignUp</button>-->
+    <!--</div>-->
 </ion-view>
