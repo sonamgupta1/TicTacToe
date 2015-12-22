@@ -1,22 +1,28 @@
-<ion-view view-title="Sign In">
-    <ion-content>
-        <div class="list">
-            <label class="item item-input">
-                <span class="input-label">Username</span>
-                <input type="text"  ng-model="username">
-            </label>
-            <label class="item item-input">
-                <span class="input-label">Password</span>
-                <input type="password"  ng-model="password">
-            </label>
+<ion-view style="" title="Login">
+    <ion-content class="has-header homeClass" overflow-scroll="false" padding="true">
+        <div class="row row-center height100Pre">
+            <div class="col">
+                <div class="list card">
+                    <div class="item item-body">
+                        <form class="list loginForm">
+                            <label name="username" class="item item-input">
+                                <input placeholder="Username" type="text" ng-model="user.username">
+                            </label>
+                            <label style="" name="password" class="item item-input">
+                                <input placeholder="Password" type="password" ng-model="user.password">
+                            </label>
+                            <button class="button button-positive" ng-click="login()">Login</button>
+                            <button class="button button-positive" ng-click="signUpPage()">SignUp</button>
+                            <!--<button class="loginBtn button button-dark button-block  icon-left ion-log-in">Login</button>-->
+                        </form>
+                    </div>
+                </div>
+                <!--<div class="list">-->
+                    <!--<div class="forgotPass"><a href="javascript:void(0);">Forgot Password ?</a></div>-->
+                <!--</div>-->
+            </div>
         </div>
-        <button class="button button-positive" ng-click="login(username,password)">Login</button>
-
-        <button class="button button-positive" ng-click="signUpPage()">SignUp</button>
     </ion-content>
-    <!--<div class="bar bar-footer">-->
-        <!--<button class="button button-positive" ng-click="login(username,password)">Login</button>-->
-
-        <!--<button class="button button-positive" ng-click="signUpPage()">SignUp</button>-->
-    <!--</div>-->
 </ion-view>
+
+

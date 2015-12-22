@@ -1,4 +1,10 @@
 {
   "name": "IonicSideMenuApp",
-  "app_id": ""
+  "app_id": "",
+  "proxies": [
+           {
+             "path": "/api",
+             "proxyUrl": "http://192.168.1.59:8000/"
+           }
+          ]
 }

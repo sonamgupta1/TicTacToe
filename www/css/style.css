@@ -1,1 +1,53 @@
 /* Empty. Add your own CSS if you like */
+.homeClass .scroll{
+    height: 100%;
+}
+.height100Pre{
+    height: 100%;
+}
+.noMarginTopBottom{
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;;
+}
+.loginForm label{
+    margin-bottom: 16px;
+    border-radius: 5px !important;
+    border: 1px solid #ccc !important;
+}
+.loginForm label input{
+    font-size: 17px;
+    line-height: 20px;
+    padding-top: 0;
+    padding-right: 16px !important;
+}
+.loginBtn{
+    border-radius: 5px;
+    margin-bottom: 0 !important;
+}
+.forgotPass{
+    display: block;
+    margin-top: -5px;
+    /*border:1px solid red;*/
+}
+.forgotPass a{
+    color: #444;
+    font-size: 16px;
+    font-weight: bold;
+}
+.genderWrapper{
+    display: block;
+    float: left;
+    width: 100%;
+}
+.genderWrapper label{
+    width: 50%;
+    float: left;
+    border: 0px none !important;
+}
+.policyWrapper label{
+    padding-left: 54px;
+    border: 0px none !important;
+}
+.policyWrapper label .item-checkbox .checkbox{
+    left: -5px;
+}

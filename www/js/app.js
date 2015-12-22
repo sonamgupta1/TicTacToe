@@ -77,6 +77,15 @@ IonicSideMenuApp.config(function($stateProvider, $urlRouterProvider) {
 
               }
           }
+      })
+      .state('app.newGame', {
+          url: '/newGame',
+          views: {
+              'menuContent': {
+                  templateUrl : 'templates/newGame.html',
+                  controller  :'newGameCtrl'
+              }
+          }
       });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');

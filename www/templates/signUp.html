@@ -1,15 +1,31 @@
-<ion-view>
-    <ion-content>
-        <h1>
-            sign up
-        </h1>
-        <button class="button button-full button-positive" ng-click="limitPicture()">Take Picture</button>
-
-        <div class="row" ng-repeat="image in images">
-
-            <img ng-src="{{image}}">
-
+<ion-view title="Register">
+    <ion-content class="has-header homeClass" overflow-scroll="false" padding="true">
+        <div class="row row-center height100Pre">
+            <div class="col">
+                <div class="list card noMarginTopBottom">
+                    <div class="item item-body">
+                        <form class="list loginForm">
+                            <label name="name" class="item item-input">
+                                <input placeholder="Name" type="text" ng-model="user.name">
+                            </label>
+                            <label style="" name="username" class="item item-input">
+                                <input placeholder="username" type="text" ng-model="user.username" ng-change="checkUserName()">
+                            </label>
+                            <label name="password" class="item item-input">
+                                <input placeholder="Password" type="password" ng-model="user.password">
+                            </label>
+                            <ion-list class="genderWrapper">
+                                <ion-radio ng-model="user.gender" ng-value="'Male'">Male</ion-radio>
+                                <ion-radio ng-model="user.gender" ng-value="'Female'">Female</ion-radio>
+                            </ion-list>
+                            <div class="policyWrapper block">
+                                <ion-checkbox>I agree privacy policy</ion-checkbox>
+                            </div>
+                            <button class="button button-dark button-block  icon-left ion-android-create" ng-click="register()">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </ion-content>
 </ion-view>
