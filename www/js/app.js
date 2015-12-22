@@ -73,8 +73,7 @@ IonicSideMenuApp.config(function($stateProvider, $urlRouterProvider) {
           views: {
               'menuContent': {
                   templateUrl: 'templates/dashboard.html',
-                  controller:'homeCtrl'
-
+                  controller:'DashboardCtrl'
               }
           }
       })

@@ -1,14 +1,10 @@
 
 IonicSideMenuApp.controller('signUpCtrl', function($scope,$state, $cordovaCamera, $stateParams, $http, $rootScope) {
 
-    $scope.user = {};
-    $scope.choice = "";
-
+    $scope.user        = {};
+    $scope.choice      = "";
     $scope.user.gender = '';
-
-    console.log("gender",$scope.user.gender);
-
-    $scope.images = [];
+    $scope.images      = [];
 
     $scope.limitPicture = function(){
         if($scope.images.length<5){
@@ -67,10 +63,16 @@ IonicSideMenuApp.controller('signUpCtrl', function($scope,$state, $cordovaCamera
                 'Content-Type': 'application/json; charset=utf-8'
             }
         }).success(function(result){
+
             alert(result.message);
-            console.log("result =========", result);
-            $scope.user = null;
-            $state.go('app.dashboard');
+            if(parseInt(result.status) === 200) {
+
+                console.log("result.data ======",result.data);
+                window.localStorage.setItem("access_token", result.data);
+
+                $state.go('app.dashboard');
+                $scope.user = null;
+            }
         }).error(function(error) {
             alert(error.message);
             console.log("error===========", JSON.stringify(error));
@@ -91,6 +93,10 @@ IonicSideMenuApp.controller('signUpCtrl', function($scope,$state, $cordovaCamera
             console.log("error===========", error);
         });
     };
+
+    $scope.demoLocalStorage = function () {
+        window.localStorage.setItem("access_token", "abc");
+    }
 
 });
 

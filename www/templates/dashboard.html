@@ -1,21 +1,21 @@
 <ion-view view-title="Dashboard">
     <ion-content>
-     <ion-list>
-         <ion-item>
-             Rank:-
-         </ion-item>
-         <ion-item>
-             Score:-
-         </ion-item>
-         <ion-item>
-             Wins:-
-         </ion-item>
-         <ion-item>
-             Loss:-
-         </ion-item>
-         <ion-item>
-             Tie:-
-         </ion-item>
-     </ion-list>
+        <ion-list ng-repeat="dash in dashBoardData">
+            <ion-item>
+                Rank:- {{dash.rank}}
+            </ion-item>
+            <ion-item>
+                Total User:- {{dash.totalUser}}
+            </ion-item>
+            <ion-item>
+                Score:- {{dash.score}}
+            </ion-item>
+            <ion-item>
+                Wins:- {{dash.win}}
+            </ion-item>
+            <ion-item>
+                Loss:- {{dash.loss}}
+            </ion-item>
+        </ion-list>
     </ion-content>
 </ion-view>

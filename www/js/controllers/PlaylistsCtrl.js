@@ -1,6 +1,4 @@
-/**
- * Created by sonam on 13/8/15.
- */
+
 
 IonicSideMenuApp.controller('PlaylistsCtrl', function($scope) {
     $scope.playlists = [
